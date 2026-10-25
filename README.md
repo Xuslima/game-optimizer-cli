@@ -1,51 +1,37 @@
 # 🚀 GameOptimizer CLI
 
-Script leve projetado para entusiastas de PC gaming e emulação que buscam reduzir o *stuttering* e extrair o desempenho máximo do hardware antes de iniciar jogos exigentes.
-<p align="center">
-  <img src="features.jpg.jpg" alt="Benefícios do Game Optimizer CLI" width="600">
-</p>
+Script simples para Windows que ativa o plano de energia de Alto Desempenho e limpa caches de shaders antes de jogar.
 
 ---
 
-### ⚡ Funcionalidades
+### ⚡ O que ele faz
 
-- **Plano de Energia:** Ativa instantaneamente o perfil de Alto Desempenho do Windows.
-- **Limpeza de Cache de Shaders:** Remove pastas e arquivos temporários de shaders da GPU (NVIDIA `DXCache`) e DirectX (`D3DSCache`) para evitar engasgos causados por cache corrompido ou acumulado.
-- **Restauração Rápida:** Repõe o plano equilibrado de energia após o encerramento da sessão de jogo.
-- **Nativo e Leve:** Criado em Batch (.bat) e PowerShell (.ps1), sem necessidade de programas pesados rodando em segundo plano.
-
----
-
-## 🛠️ Como Utilizar
-
-### 🚀 Opção 1: Executável Oficial (.exe) — Recomendado
-A forma mais rápida, prática e sem necessidade de configurar nada.
-
-1. Acesse a aba **[Releases](../../releases)** aqui do repositório.
-2. Baixe o arquivo **`GameOptimizerOficial.exe`**.
-3. Dê dois cliques para abrir (ele solicitará permissão de Administrador automaticamente).
-4. Escolha a opção desejada no menu interativo e pronto!
+- **Plano de energia:** ativa o plano Alto Desempenho e guarda qual plano estava ativo antes.
+- **Limpeza de cache de shaders:** apaga o conteúdo das pastas `D3DSCache` (DirectX) e `NVIDIA\DXCache`.
+- **Restauração:** volta ao plano de energia que você usava antes (ou ao Equilibrado, se não houver registro).
+- **Avisa quando falha:** mostra quantos itens foram apagados e quantos não puderam ser (ex.: jogo aberto).
 
 ---
 
-### ⚙️ Opção 2: Arquivo Batch (.bat)
-Para quem prefere rodar o script clássico em lote:
+### 🛠️ Como usar
 
-1. Baixe o arquivo `optimizer.bat`.
-2. Clique com o botão direito nele e selecione **Executar como administrador**.
-3. Escolha a opção desejada no menu interativo.
+1. Baixe e extraia a pasta.
+2. Dê dois cliques em `optimizer.bat` (ele abre o `optimizer.ps1`).
+3. Escolha uma opção no menu.
+
+**Não precisa de administrador.** Tudo roda com o seu usuário normal.
 
 ---
 
-### 💻 Opção 3: Script PowerShell (.ps1)
-Para usuários avançados via terminal PowerShell:
+### ⚠️ Avisos
 
-1. Baixe o arquivo `optimizer.ps1`.
-2. Abra o terminal como administrador e execute o script.
+- Depois de limpar o cache de shaders, os jogos recriam os arquivos e **podem engasgar um pouco na primeira vez**. A limpeza ajuda quando o cache está corrompido; não aumenta FPS por si só.
+- Alguns notebooks não têm o plano Alto Desempenho. O script avisa e não altera nada.
+- Feche jogos e emuladores antes de limpar o cache.
 
 ---
 
 ### 👨‍💻 Autor
 
-Criado por **[Xuslima](https://github.com/Xuslima)**  
+Criado por **[Xuslima](https://github.com/Xuslima)**
 *Entusiasta Tech | IA & Vibe Coding | Hardware & Games*

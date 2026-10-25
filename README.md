@@ -13,16 +13,32 @@ Script leve projetado para entusiastas de PC gaming e emulação que buscam redu
 
 ---
 
-### 🛠️ Como Utilizar
+## 🛠️ Como Utilizar
 
-#### Opção 1: Arquivo Batch (.bat) — *Recomendado*
+### 🚀 Opção 1: Executável Oficial (.exe) — Recomendado
+A forma mais rápida, prática e sem necessidade de configurar nada.
+
+1. Acesse a aba **[Releases](../../releases)** aqui do repositório.
+2. Baixe o arquivo **`GameOptimizerOficial.exe`**.
+3. Dê dois cliques para abrir (ele solicitará permissão de Administrador automaticamente).
+4. Escolha a opção desejada no menu interativo e pronto!
+
+---
+
+### ⚙️ Opção 2: Arquivo Batch (.bat)
+Para quem prefere rodar o script clássico em lote:
+
 1. Baixe o arquivo `optimizer.bat`.
 2. Clique com o botão direito nele e selecione **Executar como administrador**.
 3. Escolha a opção desejada no menu interativo.
 
-#### Opção 2: Script PowerShell (.ps1)
+---
+
+### 💻 Opção 3: Script PowerShell (.ps1)
+Para usuários avançados via terminal PowerShell:
+
 1. Baixe o arquivo `optimizer.ps1`.
-2. Execute via PowerShell com privilégios de administrador.
+2. Abra o terminal como administrador e execute o script.
 
 ---
 

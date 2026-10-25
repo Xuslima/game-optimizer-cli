@@ -1,3 +1,4 @@
+![Game Optimizer CLI](banner-game-optimizer.png)
 # 🚀 GameOptimizer CLI
 
 Script simples para Windows que ativa o plano de energia de Alto Desempenho e limpa caches de shaders antes de jogar.

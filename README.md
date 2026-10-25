@@ -1,6 +1,9 @@
 # 🚀 GameOptimizer CLI
 
 Script leve projetado para entusiastas de PC gaming e emulação que buscam reduzir o *stuttering* e extrair o desempenho máximo do hardware antes de iniciar jogos exigentes.
+<p align="center">
+  <img src="features.jpg.jpg" alt="Benefícios do Game Optimizer CLI" width="600">
+</p>
 
 ---
 

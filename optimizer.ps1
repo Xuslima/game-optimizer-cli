@@ -1,6 +1,6 @@
 <#
     .SYNOPSIS
-    GameOptimizer CLI - Otimizador rápido para jogos e emuladores.
+    GameOptimizer CLI - Otimizador rapido para jogos e emuladores.
     .AUTHOR
     Xuslima
 #>
@@ -18,6 +18,9 @@ Write-Host "==========================================" -ForegroundColor Cyan
 
 $opcao = Read-Host "Escolha uma opcao [1-5]"
 
+$directXCache = "$env:LOCALAPPDATA\D3DSCache"
+$nvidiaCache = "$env:LOCALAPPDATA\NVIDIA\DXCache"
+
 switch ($opcao) {
     "1" {
         Write-Host "`nAtivando plano de Alto Desempenho..." -ForegroundColor Yellow
@@ -25,27 +28,20 @@ switch ($opcao) {
         Write-Host "Plano de energia ativado com sucesso!" -ForegroundColor Green
     }
     "2" {
-        Write-Host "`nLimpando caches de shaders..." -ForegroundColor Yellow
-        $directXCache = "$env:LOCALAPPDATA\D3DSCache"
-        $nvidiaCache = "$env:LOCALAPPDATA\NVIDIA\DXCache"
-
+        Write-Host "`nLimpando caches de shaders e subpastas..." -ForegroundColor Yellow
+        
         if (Test-Path $directXCache) {
             Remove-Item "$directXCache\*" -Recurse -Force -ErrorAction SilentlyContinue
-            Write-Host "Cache DirectX limpo." -ForegroundColor Green
         }
         if (Test-Path $nvidiaCache) {
             Remove-Item "$nvidiaCache\*" -Recurse -Force -ErrorAction SilentlyContinue
-            Write-Host "Cache NVIDIA limpo." -ForegroundColor Green
         }
-        Write-Host "Limpeza de shaders concluida!" -ForegroundColor Green
+        Write-Host "Cache de shaders limpo com sucesso!" -ForegroundColor Green
     }
     "3" {
         Write-Host "`nExecutando otimizacao completa..." -ForegroundColor Yellow
         powercfg -setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
         
-        $directXCache = "$env:LOCALAPPDATA\D3DSCache"
-        $nvidiaCache = "$env:LOCALAPPDATA\NVIDIA\DXCache"
-
         if (Test-Path $directXCache) {
             Remove-Item "$directXCache\*" -Recurse -Force -ErrorAction SilentlyContinue
         }
